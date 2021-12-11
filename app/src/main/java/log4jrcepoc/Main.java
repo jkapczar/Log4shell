@@ -17,12 +17,12 @@ import com.sun.net.httpserver.HttpServer;
 
 public class Main {
 	
-	static Logger logmainger = LogManager.getLogger(Main.class);
+	static Logger mainLogger = LogManager.getLogger(Main.class);
 	
     public static void main(String[] args) throws Exception {
     	System.setProperty("com.sun.jndi.ldap.object.trustURLCodebase","true");
-    	logmainger.error(System.getProperty("com.sun.jndi.ldap.object.trustURLCodebase"));
-    	logmainger.error("start");
+    	mainLogger.error(System.getProperty("com.sun.jndi.ldap.object.trustURLCodebase"));
+    	mainLogger.error("start");
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/test", new MyHandler());
         server.setExecutor(java.util.concurrent.Executors.newCachedThreadPool());
