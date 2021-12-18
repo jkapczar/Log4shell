@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 	@RequestMapping(value="/test" ,method= RequestMethod.GET)
-    public ResponseEntity<String> find() {
+    public ResponseEntity<String> test() {
         try {
             return new ResponseEntity<>("", HttpStatus.OK);
         } catch (Exception e) {
