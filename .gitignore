@@ -1,2 +1,3 @@
 spring/bin/
 spring/.*
+app/target/*
